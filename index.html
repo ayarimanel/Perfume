@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ Personality Scent Quiz ✨</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="quiz-container">
+            <div class="header">
+                <div class="sparkles">✨</div>
+                <h1>Personality Scent Quiz</h1>
+                <div class="sparkles">✨</div>
+            </div>
+            <p class="subtitle">✧ Discover your perfect fragrance match ✧</p>
+
+            <div id="question-container">
+                <div class="progress-container">
+                    <p class="progress-text"></p>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img id="question-image" src="" alt="Question Image">
+                </div>
+
+                <h2 id="question-text"></h2>
+
+                <div class="options-container"></div>
+            </div>
+
+            <div id="result-container" style="display: none;">
+                <div class="heart">❤️</div>
+                <h2 class="result-type"></h2>
+                <p class="result-description"></p>
+                <div class="notes-container">
+                    <h3>✧ Your Perfect Scent Notes ✧</h3>
+                    <ul class="notes-list"></ul>
+                </div>
+                <button class="retry-button">Take the Quiz Again 🌟</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

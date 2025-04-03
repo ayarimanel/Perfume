@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F8F4E3;
+    color: #706C61;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#quiz-container {
+    background: white;
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0 10px 30px rgba(194, 135, 232, 0.2);
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.sparkles {
+    font-size: 24px;
+    animation: sparkle 1.5s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+h1 {
+    color: #C287E8;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 0;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 32px;
+    color: #706C61;
+}
+
+.progress-container {
+    margin-bottom: 24px;
+}
+
+.progress-text {
+    color: #E6ADEC;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #f0f0f0;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #E6ADEC;
+    border-radius: 999px;
+    transition: width 0.3s ease;
+}
+
+.image-container {
+    width: 100%;
+    height: 300px;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+#question-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+#question-image:hover {
+    transform: scale(1.05);
+}
+
+#question-text {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+    color: #706C61;
+}
+
+.options-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+.option-button {
+    background: #F8F4E3;
+    border: none;
+    padding: 16px 24px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #706C61;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.option-button:hover {
+    background: #E6ADEC;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.option-button::after {
+    content: '→';
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+.option-button:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#result-container {
+    text-align: center;
+}
+
+.heart {
+    font-size: 48px;
+    margin-bottom: 24px;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.result-type {
+    color: #C287E8;
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.result-description {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+}
+
+.notes-container {
+    background: #F8F4E3;
+    padding: 24px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+}
+
+.notes-container h3 {
+    color: #E6ADEC;
+    margin-bottom: 16px;
+}
+
+.notes-list {
+    list-style: none;
+}
+
+.notes-list li {
+    margin: 8px 0;
+    font-size: 1.1rem;
+}
+
+.retry-button {
+    background: #FF8966;
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.retry-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 137, 102, 0.3);
+}
